@@ -1,9 +1,28 @@
 # api-rest-loader-excel-to-json
 
-L'objectif de ce test est de concevoir une API REST pour pouvoir charger un fichier Excel et 
+L'objectif  est de concevoir une API REST pour pouvoir charger un fichier Excel et 
 offrir la possibilité de retrouver la structure du fichier chargé sous un format JSON
 
-# Features
+# Etude Conception
+
+Pour atteindre cet objectif il faut récupérer le fichier Excel et enregistrer ses éléments sur une base de données h2 en mémoire.
+Ensuite créer deux tableaux ExelFile pour enregistrer le nom du fichier pour ensuite y faire appel lorsqu'on veut par exemple récupérer le nom du fichier et la table Employee pour enregistrer les données de ce fichier.
+Faire un Mapping entre ces tables avec une relation OneToMany, cela me permettra de récupérer le nom du fichier et ses éléments comme on l'a défini sur le WS qui recherche le nom du fichier et qui l'affiche avec ses éléments.
+Enfin cela me permettra aussi de faire des mis à jour sur les données du fichier en créant une interface qui étends   l'interface CrudRepository avec des méthodes spécifiques que je définirai sur cette interface en utilisant l'annotation @Query.
+Ces repositories seront utilisés sur le contrôleur nous permettant de créer ses WS REST.
+Pour charger le fichier Excel et faire des recherches, j’avais prévu de créer un IHM avec Angular une fois qu'on sera sur le localhost:8080 puisqu'on ne devait pas utiliser un autre logiciel.
+
+
+# Test
+
+Pour tester l'implémentation des WS REST , j'avais prévu d'utiiser REST Assured 
+
+# Documentation API WS REST
+
+J'avais prévu d'utiliser SWAGGER pour faire la documentation des WS
+
+
+# Fonctionnalités API WS REST
 
 * Upload and process Excel file and saving the file in the h2 database
 * Recherche du nom d'un fichier Excel et affichage sous un format Json
@@ -18,8 +37,13 @@ Vous pouvouvez le recupérer
 via ce lien: https://github.com/mtn2018/api-rest-loader-excel-to-json/tree/master/src/main/resources/templates
 Créer un dossier avec le chemin  suivant : C:/temp pour que avoir le service de Upload File qui l'utilisera.
 
+Vous pouvouvez aussi regarder quelques images sur les résultats que j'ai obtenu sur POSTMAN et la console de h2.
+Clickez ici : Vous pouvouvez le recupérer 
+via ce lien: https://github.com/mtn2018/api-rest-loader-excel-to-json/tree/master/src/main/resources/templates
+Pour voir le console h2 et effectuer des requêtes sur les données allez sur :http://localhost:8080/console/
 
-# Methods Procédé
+
+# Méthode Procédé
 
 Librairies utilisés:
 
@@ -31,28 +55,21 @@ Librairies utilisés:
   Employee et ExelFile nous permettant de gérer le service qui fait des mises à jour.
   
 
-# End Points 
-URLS END-POINTS
-- Upload File: http://localhost:8080//api/ositel/uploadExcelFile/idExcelFile
+#  END-POINTS URL
+
+- Upload File: http://localhost:8080//api/ositel/uploadExcelFile/idExcelFile avec idExcelFile  un type Long
 - Ajout du nom de fichier : http://localhost:8080//api/ositel/searchExcelFile/{name}
 - Affichage dees données du fichier Excel : http://localhost:8080//api/ositel//allEmployees
 
-
-
-
 # Usage
 
-## If you are using IntelliJ
+## Ouvrez votre ligne de commande et placez vous sur un dossier
 
-Open the project in IntelliJ
+* git clone https://github.com/mtn2018/api-rest-loader-excel-to-json.git
+* cd api-rest-loader-excel-to-json
+* mvn spring-boot:run
+* Attendez le lancemen de l'application 
+* Aller sur votre  navigateur to http://localhost:8080 si vous voyez ce message sur le console "Tomcat started on port(s): 8080 ..."
 
-Go to src/java/com.github.chen0040.bootslingshot and right-click SpringSlingshotApplication and select "Run main()" in IntelliJ
 
-Navigate to your web browser to http://localhost:8080
 
-## If you are uploading a Excel file
-
-Once at http://localhost:8080, click "Excel Sample Download" to download a csv sample, then click "Choose File" to load the
-downloaded Excel sample,and then click "Upload Excel", you will notice that as the product is being saved on the remote server,
-the web page keeps on updating the progress (done using websocket and sockjs). At the backend, the Thread.sleep is used to simulate
-long running process.
