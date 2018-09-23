@@ -68,7 +68,7 @@ Librairies utilisés:
 * git clone https://github.com/mtn2018/api-rest-loader-excel-to-json.git
 * cd api-rest-loader-excel-to-json
 * mvn spring-boot:run
-* Attendez le lancemen de l'application 
+* Attendez le lancement de l'application 
 * Aller sur votre  navigateur to http://localhost:8080 si vous voyez ce message sur le console "Tomcat started on port(s): 8080 ..."
 
 
