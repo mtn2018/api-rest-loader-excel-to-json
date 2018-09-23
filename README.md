@@ -31,7 +31,11 @@ Librairies utilisés:
   Employee et ExelFile nous permettant de gérer le service qui fait des mises à jour.
   
 
-# End Points
+# End Points 
+URLS END-POINTS
+- Upload File: http://localhost:8080//api/ositel/uploadExcelFile/idExcelFile
+- Ajout du nom de fichier : http://localhost:8080//api/ositel/searchExcelFile/{name}
+- Affichage dees données du fichier Excel : http://localhost:8080//api/ositel//allEmployees
 
 
 
