@@ -3,7 +3,7 @@
 L'objectif  est de concevoir une API REST pour pouvoir charger un fichier Excel et 
 offrir la possibilité de retrouver la structure du fichier chargé sous un format JSON
 
-# Etude Conception
+# Etude et Conception
 
 Pour atteindre cet objectif il faut récupérer le fichier Excel et enregistrer ses éléments sur une base de données h2 en mémoire.
 Ensuite créer deux tableaux ExelFile pour enregistrer le nom du fichier pour ensuite y faire appel lorsqu'on veut par exemple récupérer le nom du fichier et la table Employee pour enregistrer les données de ce fichier.
@@ -15,7 +15,7 @@ Pour charger le fichier Excel et faire des recherches, j’avais prévu de crée
 
 # Test
 
-Pour tester l'implémentation des WS REST , j'avais prévu d'utiiser REST Assured 
+Pour tester l'implémentation des WS REST , j'avais prévu d'utiliser REST Assured 
 
 # Documentation API WS REST
 
@@ -33,14 +33,14 @@ J'avais prévu d'utiliser SWAGGER pour faire la documentation des WS
 # NB
 
 J'ai travaillé sur un fichier nommé Employee.xlsx avec un schema de table bien défini.
-Vous pouvouvez le recupérer 
-via ce lien: https://github.com/mtn2018/api-rest-loader-excel-to-json/tree/master/src/main/resources/templates
-Créer un dossier avec le chemin  suivant : C:/temp pour que avoir le service de Upload File qui l'utilisera.
+Vous pouvouvez le recupérer via le lien en dessous.
 
+Créer un dossier  sur C avec le chemin  suivant  C:/temp pour que le service de Upload File soit disponible.
 Vous pouvouvez aussi regarder quelques images sur les résultats que j'ai obtenu sur POSTMAN et la console de h2.
-Clickez ici : Vous pouvouvez le recupérer 
-via ce lien: https://github.com/mtn2018/api-rest-loader-excel-to-json/tree/master/src/main/resources/templates
-Pour voir le console h2 et effectuer des requêtes sur les données allez sur :http://localhost:8080/console/
+Vous pouvouvez le recupérer sur le lien. 
+Pour voir le console h2 et effectuer des requêtes sur les données : http://localhost:8080/console
+https://github.com/mtn2018/api-rest-loader-excel-to-json/tree/master/src/main/resources/templates
+
 
 
 # Méthode Procédé
