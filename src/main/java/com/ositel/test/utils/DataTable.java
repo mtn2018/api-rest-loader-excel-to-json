@@ -5,9 +5,8 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
-
 /**
- * Created by xschen on 10/7/2016.
+ * Created by DEFARTECH on 22/09/2018.
  */
 public class DataTable implements Serializable {
     private DataColumnCollection dataColumns = new DataColumnCollection();

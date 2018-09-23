@@ -31,10 +31,10 @@ public class FileUploadController {
 
 
 
-	@RequestMapping(path = "/uploadfilexls/{idExcelFile}", method = RequestMethod.POST)
+	@RequestMapping(path = "/uploadExcelFile/{idExcelFile}", method = RequestMethod.POST)
     public void singleFileUpload(
             @PathVariable Long idExcelFile,
-            @RequestParam("file") MultipartFile file             ) {
+            @RequestParam("file") MultipartFile file ) {
 
         if (file.isEmpty()) {
            System.out.print(("message"+ "Please select a file to upload"));

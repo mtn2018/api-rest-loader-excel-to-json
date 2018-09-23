@@ -6,7 +6,7 @@ import java.util.function.Consumer;
 
 
 /**
- * Created by xschen on 10/7/2016.
+ * Created by DEFARTECH on 22/09/2018.
  */
 public class DataColumnCollection implements Serializable, Iterable<DataColumn> {
     private static final long serialVersionUID = 1295848949690118176L;

@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 
 
 /**
- * Created by xschen on 10/7/2016.
+ * Created by DEFARTECH on 22/09/2018.
  */
 public class DataRowCollection implements Serializable, Iterable<DataRow> {
     private List<DataRow> rows = new ArrayList<>();
